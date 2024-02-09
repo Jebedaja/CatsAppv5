@@ -1,0 +1,33 @@
+﻿@{    
+    ViewData["Title"] = "Home Page";     
+}
+
+<!DOCTYPE html>                                                 <!-- strona glowna -->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CatsApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HomePage.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="text-center">
+        <h1>Welcome to our cat-tastic corner! 🐱</h1>
+        <p>Get ready for a purr-fect blend of facts, photos, and gifs that will whisk you into the wonderful world of felines. Let's embark on a meow-nificent journey together! 🐾</p>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>

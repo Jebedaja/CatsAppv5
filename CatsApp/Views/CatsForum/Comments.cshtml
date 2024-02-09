@@ -1,0 +1,58 @@
+﻿@model List<CatsForum.Models.Comment>       
+
+<h1>Cats Forum</h1>
+
+@foreach (var comment in Model)
+{
+    <div>
+        <p><strong>@comment.AuthorName</strong>: @comment.Content</p>     <!-- przechodzi przez rokordy po kolei i wypisuje autora i komentarz z bazy danych -->
+    </div>
+}
+
+<hr />
+
+<h2>Add Comment</h2>
+<<<<<<< HEAD
+<form asp-controller="CatsForum" asp-action="AddComment" method="post" class="comment-form">        <!-- Dodanie formularza do komentarza -->
+    <div class="form-group">
+        <label for="authorName">Author Name:</label>
+        <input type="text" id="authorName" name="AuthorName" required class="form-control" />       <!-- Dodanie pola do wprowadzenia autora -->
+=======
+<form asp-controller="CatsForum" asp-action="AddComment" method="post" class="comment-form">
+    <div class="form-group">
+        <label for="authorName">Author Name:</label>
+        <input type="text" id="authorName" name="AuthorName" required class="form-control" />
+>>>>>>> 0b43580376475a1f098cf8fc50842e93b373d7f4
+        @if (Model.Count > 0)
+        {
+            <div class="text-danger">@Html.ValidationMessageFor(model => model[0].AuthorName)</div>     <!-- Dodanie walidacji do pola autora -->
+        }
+    </div>
+    <div class="form-group">
+        <label for="content">Content:</label>
+<<<<<<< HEAD
+        <textarea id="content" name="Content" required class="form-control"></textarea>           <!-- Dodanie pola do wprowadzenia komentarza -->
+=======
+        <textarea id="content" name="Content" required class="form-control"></textarea>
+>>>>>>> 0b43580376475a1f098cf8fc50842e93b373d7f4
+        @if (Model.Count > 0)
+        {
+            <div class="text-danger">@Html.ValidationMessageFor(model => model[0].Content)</div>   <!-- Dodanie walidacji do pola komentarza -->    
+        }
+    </div>
+<<<<<<< HEAD
+    <button type="submit" class="btn btn-primary">Add Comment</button>                            <!-- Dodanie przycisku do dodania komentarza -->
+    @Html.ValidationSummary()
+</form>
+
+<link rel="stylesheet" href="~/css/Forum.css" />                                                 <!-- Dodanie pliku css do forum -->
+```
+=======
+    <button type="submit" class="btn btn-primary">Add Comment</button>
+    @Html.ValidationSummary()
+</form>
+
+<link rel="stylesheet" href="~/css/Forum.css" />
+>>>>>>> 0b43580376475a1f098cf8fc50842e93b373d7f4
+
+
